@@ -3,28 +3,28 @@ import java.util.List;
 
 class Task {
   private String name;
-  private boolean completed;
+  private boolean Done;
 
   public Task(String name) {
     this.name = name;
-    this.completed = false;
+    this.Done = false;
   }
 
   public String getName() {
     return name;
   }
 
-  public boolean isCompleted() {
-    return completed;
+  public boolean isDone() {
+    return Done;
   }
 
-  public void markAsCompleted() {
-    this.completed = true;
+  public void markAsDone() {
+    this.Done = true;
   }
 
   @Override
   public String toString() {
-    return name + (completed ? " [Completed]" : "");
+    return name + (Done ? " [Done]" : "");
   }
 }
 
@@ -40,17 +40,17 @@ public class TaskPlanner {
     System.out.println("Task added: " + taskName);
   }
 
-  public void markTaskAsCompleted(int index) {
+  public void markTaskAsDone(int index) {
     if (index >= 0 && index < tasks.size()) {
       Task task = tasks.get(index);
-      task.markAsCompleted();
-      System.out.println("Task marked as completed: " + task.getName());
+      task.markAsDone();
+      System.out.println("Task marked as Done: " + task.getName());
     } else {
       System.out.println("Invalid task index.");
     }
   }
 
-  public void displayTasks() {
+  public void showTasks() {
     if (tasks.isEmpty()) {
       System.out.println("No tasks available.");
     } else {

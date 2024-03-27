@@ -8,13 +8,13 @@ public class Main {
         while (true) {
             System.out.println("\nMenu:");
             System.out.println("1. Add Task");
-            System.out.println("2. Mark Task as Completed");
-            System.out.println("3. Display Tasks");
+            System.out.println("2. Mark Task as Done");
+            System.out.println("3. Show Tasks");
             System.out.println("4. Exit");
 
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline character
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
@@ -25,7 +25,7 @@ public class Main {
                 case 2:
                     System.out.print("Enter task index: ");
                     int index = scanner.nextInt() - 1;
-                    taskPlanner.markTaskAsCompleted(index);
+                    taskPlanner.markTaskAsDone(index);
                     break;
                 case 3:
                     taskPlanner.displayTasks();
