@@ -50,7 +50,7 @@ public class TaskPlanner {
     }
   }
 
-  public void showTasks() {
+  public void displayTasks() {
     if (tasks.isEmpty()) {
       System.out.println("No tasks available.");
     } else {
